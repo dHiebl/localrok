@@ -33,7 +33,7 @@ max_prompt_tokens = 8000
 
 [llm]
 base_url = "http://localhost:11434/v1"
-model = "qwen3.5:9b-mlx"          # select an installed model that supports tools
+model = "gemma4:31b-cloud"          # select an installed model that supports tools
 context_window = 32768           # configure this size in Ollama as well
 max_output_tokens = 4096
 
