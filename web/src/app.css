@@ -1,0 +1,48 @@
+@import "@earendil-works/pi-web-ui/app.css";
+
+.localrok-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid var(--color-border, #333);
+  background: var(--color-bg-secondary, #1a1a1a);
+  flex-shrink: 0;
+}
+
+.localrok-header-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-text, #e0e0e0);
+}
+
+.localrok-model {
+  flex: 1;
+  margin: 0 1rem;
+  font-size: 0.8rem;
+  line-height: 1.3;
+}
+
+.localrok-model-up {
+  color: var(--color-text-muted, #8fbc8f);
+}
+
+.localrok-model-down {
+  color: #e6b35a;
+}
+
+.localrok-db-select {
+  padding: 0.3rem 0.5rem;
+  border-radius: 6px;
+  border: 1px solid var(--color-border, #444);
+  background: var(--color-bg, #111);
+  color: var(--color-text, #e0e0e0);
+  font-size: 0.85rem;
+  cursor: default;
+  outline: none;
+  max-width: 28rem;
+}
+
+.localrok-db-select:focus {
+  border-color: var(--color-accent, #5b9bd5);
+}

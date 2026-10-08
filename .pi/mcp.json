@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "localrok": {
+      "command": "uv",
+      "args": ["run", "--offline", "--frozen", "localrok", "serve"],
+      "exposure": "direct",
+      "description": "Search, read, and outline the user's local document collection."
+    }
+  },
+  "autoEnableCodemode": false
+}

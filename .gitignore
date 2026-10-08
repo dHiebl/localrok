@@ -1,0 +1,61 @@
+# Private documents and generated corpus artifacts; keep only empty folders.
+/corpus/*
+!/corpus/source/
+!/corpus/derived/
+/corpus/source/**
+/corpus/derived/**
+!/corpus/source/.keep
+!/corpus/derived/.keep
+
+# SQLite databases, journals, and write-ahead-log sidecars anywhere in the repo.
+*.db
+*.db-*
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.sqlite3-*
+
+# Private evaluation inputs and generated results.
+/eval/questions*.toml
+/eval/results/*
+!/eval/results/.keep
+
+# Local configuration and credentials; example environment files can be shared.
+.env
+.env.*
+!.env.example
+!.env.*.example
+/config.local.toml
+
+# Python environments, caches, test coverage, and build artifacts.
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.tox/
+.nox/
+.uv-cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+*.egg-info/
+/build/
+/dist/
+
+# JavaScript dependencies, caches, and generated frontend output.
+node_modules/
+.npm/
+.vite/
+*.tsbuildinfo
+/web/dist/
+
+# Local logs and operating-system/editor files.
+*.log
+.DS_Store
+._*
+Thumbs.db
+.idea/

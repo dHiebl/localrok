@@ -1,0 +1,45 @@
+[paths]
+source = "corpus/source"
+derived = "corpus/derived"
+
+[ingest]
+device = "auto"                  # auto, cpu, mps, cuda, or cuda:N
+gpu_ids = []                     # empty: consider all visible NVIDIA devices
+gpu_min_free_mib = 8192
+gpu_min_free_mib_charts = 20480
+unit_max_tokens = 384
+images_scale = 2.0
+figure_max_edge_px = 1600
+do_charts = false                # enable with localrok ingest --charts
+do_formulas = false
+do_code = false
+chart_max_new_tokens = 512
+chart_batch_size = 1
+
+[search]
+default_limit = 8
+max_limit = 20
+window_max_chars = 1200
+units_per_section_cap = 2
+heading_weight = 2.0
+
+[read]
+max_tokens = 5000                # total result budget; leave room below Pi's MCP limit
+chars_per_token = 3.5
+
+[prompt]
+corpus_map_max_tokens = 4000
+max_prompt_tokens = 8000
+
+[llm]
+base_url = "http://localhost:11434/v1"
+model = "qwen3.5:9b-mlx"          # select an installed model that supports tools
+context_window = 32768           # configure this size in Ollama as well
+max_output_tokens = 4096
+
+[agent]
+pi_bin = "pi"                    # optional CLI evaluation; resolved through PATH
+provider = "ollama"
+thinking_level = "off"
+tools = ["mcp__localrok__docs_search", "mcp__localrok__docs_read", "mcp__localrok__docs_outline"]
+baseline_tools = ["grep", "find", "read", "ls"]
